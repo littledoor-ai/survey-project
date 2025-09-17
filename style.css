@@ -1,0 +1,4 @@
+body { font-family: Arial, sans-serif; margin: 20px; }
+.container { max-width: 800px; margin: auto; }
+img { max-width: 100%; height: auto; margin: 10px 0; }
+.score-label { display: flex; justify-content: space-between; }
