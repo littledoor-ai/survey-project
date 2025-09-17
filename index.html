@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>보행 안전 인식 조사</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="survey-container">
+    <div id="intro-page" class="page active">
+      <h1>보행 안전 인식 조사</h1>
+      <p>
+        안녕하세요.<br>
+        본 설문은 <b>한양대학교 도시공학과 도시설계 및 공간분석 연구실 (Urban Design and Spatial Analytics Lab)</b>에서 수행하는 연구의 일환으로,
+        서울시 보행환경에 대한 <b>안전 인식 (Perceived Safety)</b>을 평가하기 위해 진행됩니다.
+      </p>
+      <p>
+        제시되는 이미지는 <b>네이버 스트리트뷰(Naver Street View, NSV)</b>를 기반으로 한 실제 보행환경 사진이며,
+        응답자 여러분의 주관적인 평가가 연구에 중요한 자료로 활용됩니다.
+      </p>
+      <h3>📝 설문 참여 안내</h3>
+      <ul>
+        <li>각 문항마다 1장의 보행환경 사진이 제시됩니다.</li>
+        <li>사진을 보신 뒤, “이 장소에서 보행할 때 느끼는 교통사고 위험” 수준을 0~10점 척도로 평가해 주세요.</li>
+        <li>0점 = 매우 위험하다 / 10점 = 매우 안전하다</li>
+      </ul>
+      <h3>⚠️ 유의사항</h3>
+      <ul>
+        <li>사진 속 장소를 실제로 경험했다고 가정하고 평가해 주세요.</li>
+        <li>설문 응답은 익명으로 처리되며, 연구 목적으로만 사용됩니다.</li>
+        <li>설문 전체 소요 시간은 약 5~7분입니다.</li>
+        <li>일관성 있는 응답을 위해 동일한 이미지가 일부 반복 제시될 수 있습니다.</li>
+      </ul>
+      <button onclick="startSurvey()">설문 시작하기</button>
+    </div>
+
+    <div id="question-page" class="page">
+      <div id="progress-text"></div>
+      <div id="criteria-box">
+        <p><b>평가 시 고려사항:</b><br>
+        보행자 시설 / 보행 공간 / 차량 통행량 / 교통수단 다양성 / 안전 시설물 / 종합적 안전성<br>
+        (※ 범죄·치안 제외, 교통사고 위험성만 고려)</p>
+      </div>
+      <img id="survey-image" src="" alt="보행환경 이미지">
+      <div class="scale-labels">
+        <span>0 (매우 위험하다)</span>
+        <span>5 (보통)</span>
+        <span>10 (매우 안전하다)</span>
+      </div>
+      <input type="range" id="score-slider" min="0" max="10" step="1" value="5">
+      <button onclick="nextImage()">다음</button>
+    </div>
+
+    <div id="end-page" class="page">
+      <h2>설문이 완료되었습니다. 참여해 주셔서 감사합니다!</h2>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
