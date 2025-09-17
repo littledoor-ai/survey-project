@@ -1,0 +1,9 @@
+body { font-family: sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
+#survey-container { width: 80%; max-width: 700px; margin: 40px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+.page { text-align: center; }
+button { padding: 10px 20px; margin: 10px; border: none; border-radius: 5px; background: #007bff; color: white; cursor: pointer; }
+button:hover { background: #0056b3; }
+#progress-container { width: 100%; background: #ddd; height: 10px; margin: 20px 0; border-radius: 5px; }
+#progress-bar { height: 10px; background: #28a745; width: 0%; border-radius: 5px; }
+.image-container img { max-width: 100%; border-radius: 6px; }
+.likert-scale { display: flex; justify-content: space-between; margin-top: 10px; }
