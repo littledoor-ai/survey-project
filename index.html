@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>보행안전 인식 조사</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="intro">
+    <h1>보행안전 인식 조사</h1>
+    <p>
+      안녕하세요.<br>
+      본 설문은 <b>한양대학교 도시공학과 도시설계 및 공간분석 연구실 (Urban Design and Spatial Analytics Lab)</b>에서 수행하는 연구의 일환으로,
+      서울시 보행환경에 대한 <b>안전 인식(Perceived Safety)</b>을 평가하기 위해 진행됩니다.
+    </p>
+    <p>
+      제시되는 이미지는 <b>네이버 스트리트뷰(Naver Street View, NSV)</b>를 기반으로 한 실제 보행환경 사진이며,<br>
+      응답자 여러분의 주관적인 평가가 연구에 중요한 자료로 활용됩니다.
+    </p>
+    <h3>📝 설문 참여 안내</h3>
+    <ul>
+      <li>각 문항마다 1장의 보행환경 사진이 제시됩니다.</li>
+      <li>사진을 보신 뒤, “이 장소에서 보행할 때 느끼는 교통사고 위험” 수준을 0~10점 척도로 평가해 주세요.</li>
+      <li>0점 = 매우 위험하다 / 10점 = 매우 안전하다</li>
+    </ul>
+    <p>⚠️ 평가 시 <b>교통사고 위험성</b>만 고려해 주시고, 범죄·치안 요인은 제외해 주세요.</p>
+    <button id="startBtn">설문 시작하기</button>
+  </div>
+
+  <div id="survey" style="display:none;">
+    <div id="progress"></div>
+    <img id="image" src="" alt="survey image">
+    <div id="scale"></div>
+    <button id="nextBtn" disabled>다음</button>
+  </div>
+
+  <div id="end" style="display:none;">
+    <h2>설문이 완료되었습니다. 참여해주셔서 감사합니다!</h2>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
