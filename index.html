@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>보행환경 안전 인식 설문조사</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 표지 페이지 -->
+  <section id="intro-page" class="page active">
+    <h1>보행환경에 대한 안전 인식 (Perceived Safety)</h1>
+    <p>
+      본 설문은 <b>한양대학교 도시공학과 도시설계 및 공간분석 연구실</b>에서 
+      서울시 보행환경에 대한 안전 인식을 평가하기 위해 진행됩니다.
+    </p>
+    <h3>평가 방법</h3>
+    <ul style="text-align:left; max-width:600px; margin:auto;">
+      <li>사진을 보신 뒤 “이 장소에서 보행할 때 느끼는 교통사고 위험” 수준을 0~10점으로 평가</li>
+      <li>0점 = 매우 위험하다, 10점 = 매우 안전하다</li>
+      <li>※ 범죄·치안 요인은 제외</li>
+    </ul>
+
+    <!-- 기본 정보 입력 -->
+    <div class="form-section">
+      <h3>기본 정보</h3>
+      <label>성별:</label>
+      <label><input type="radio" name="gender" value="남"> 남</label>
+      <label><input type="radio" name="gender" value="여"> 여</label>
+      <br><br>
+      <label>연령대:</label>
+      <select name="age" id="age">
+        <option value="">선택해 주세요</option>
+        <option value="10대">10대</option>
+        <option value="20대">20대</option>
+        <option value="30대">30대</option>
+        <option value="40대">40대</option>
+        <option value="50대">50대</option>
+        <option value="60대">60대</option>
+        <option value="70대 이상">70대 이상</option>
+      </select>
+    </div>
+
+    <button id="startBtn">설문 시작</button>
+  </section>
+
+  <!-- 설문 페이지 -->
+  <section id="survey-page" class="page">
+    <h2>이미지를 보고 보행 안전성을 평가해주세요</h2>
+    <p class="subtext">0 = 매우 위험하다 / 10 = 매우 안전하다</p>
+    <div id="progress"></div>
+    <div id="loading">이미지 불러오는 중...</div>
+    <img id="survey-image" alt="보행환경 이미지" class="survey-img" />
+    
+    <form id="score-form">
+      <div class="scale">
+        <label><input type="radio" name="score" value="0">0</label>
+        <label><input type="radio" name="score" value="1">1</label>
+        <label><input type="radio" name="score" value="2">2</label>
+        <label><input type="radio" name="score" value="3">3</label>
+        <label><input type="radio" name="score" value="4">4</label>
+        <label><input type="radio" name="score" value="5">5</label>
+        <label><input type="radio" name="score" value="6">6</label>
+        <label><input type="radio" name="score" value="7">7</label>
+        <label><input type="radio" name="score" value="8">8</label>
+        <label><input type="radio" name="score" value="9">9</label>
+        <label><input type="radio" name="score" value="10">10</label>
+      </div>
+    </form>
+    <div class="buttons">
+      <button type="button" id="prevBtn">이전</button>
+      <button type="button" id="nextBtn">다음</button>
+    </div>
+  </section>
+
+  <!-- 완료 페이지 -->
+  <section id="end-page" class="page">
+    <h2>참여해 주셔서 감사합니다!</h2>
+    <p>응답이 성공적으로 기록되었습니다.</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
